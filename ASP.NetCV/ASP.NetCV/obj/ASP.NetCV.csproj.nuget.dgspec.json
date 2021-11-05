@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ASP.NETCV\\ASP.NetCV\\ASP.NetCV\\ASP.NetCV.csproj": {}
+    "C:\\Users\\User\\Desktop\\back cv\\CvSolution\\ASP.NetCV\\ASP.NetCV\\ASP.NetCV.csproj": {}
   },
   "projects": {
-    "C:\\ASP.NETCV\\ASP.NetCV\\ASP.NetCV\\ASP.NetCV.csproj": {
+    "C:\\Users\\User\\Desktop\\back cv\\CvSolution\\ASP.NetCV\\ASP.NetCV\\ASP.NetCV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ASP.NETCV\\ASP.NetCV\\ASP.NetCV\\ASP.NetCV.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\back cv\\CvSolution\\ASP.NetCV\\ASP.NetCV\\ASP.NetCV.csproj",
         "projectName": "ASP.NetCV",
-        "projectPath": "C:\\ASP.NETCV\\ASP.NetCV\\ASP.NetCV\\ASP.NetCV.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\back cv\\CvSolution\\ASP.NetCV\\ASP.NetCV\\ASP.NetCV.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\ASP.NETCV\\ASP.NetCV\\ASP.NetCV\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\back cv\\CvSolution\\ASP.NetCV\\ASP.NetCV\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
