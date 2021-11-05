@@ -1,0 +1,135 @@
+﻿@model AboutInfo
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<!-- Mirrored from new.uouapps.com/remoticv/about-me.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 May 2019 06:20:30 GMT -->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="M_Adnan" />
+    <!-- Document Title -->
+    <title>Resume / CV HTML5 Template</title>
+
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="~/assets/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/assets/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/assets/css/main.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/css/responsive.css">
+
+    <!-- FontsOnline -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- JavaScripts -->
+    <script src="~/assets/js/vendors/modernizr.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body>
+
+    <!-- Page Wrapper -->
+    <!-- MAIN CONTENT -->
+    <div class="col-md-8">
+        <div class="inside-sec">
+            <!-- BIO AND SKILLS -->
+            <h5 class="tittle">About Me</h5>
+
+            <!-- Blog -->
+            <section class="about-me padding-top-10 padding-bottom-50">
+                @await Component.InvokeAsync("UserInfo")
+                <!-- Personal Info -->
+                <!-- I’m Web Designer -->
+                <h5 class="tittle">@Model.Work.WorkDesc</h5>
+                <div class="padding-20">
+                    <p>
+                        @Model.Work.WorkShortDesc
+                        <br>
+                        @Model.Work.WorkLongDesc
+                        <br>
+                        <br>
+                    </p>
+                </div>
+                <!-- Services -->
+                <h5 class="tittle">Services</h5>
+                <div class="row padding-20 margin-top-50">
+
+                    @foreach (var item in Model.Services)
+                        {
+                            <div class="col-md-4 text-center">
+                                <div class="icon-box i-large ib-black">
+                                    <div class="ib-icon"> <i class="@item.Icons.FirstOrDefault(c=>c.ServiceID==item.Id).Icon"  ></i> </div>  @*birde baxilacaq*@
+                                    <div class="ib-info">
+                                        <h4 class="h6">@item.Name</h4>
+                                        <p>@item.Description</p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    <!-- Icon -->
+
+
+                </div>
+
+
+                <!-- Skills -->
+                <h5 class="tittle">Skills</h5>
+
+                <!-- Sound Engineering -->
+                <div class="panel-group accordion padding-20" id="accordion">
+                    @foreach (var item in Model.Skills)
+                    {
+                        <div class="panel panel-default">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <!-- PANEL HEADING -->
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#@item.Id" class="collapsed"> @item.skilsName</a> </h4>
+                                    </div>
+                                </div>
+
+                                <!-- Skillls Bars -->
+                                <div class="col-sm-8">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"> <span class="sr-only">60% Complete</span> </div>
+                                    </div>
+
+                                    <!-- Skillls Text -->
+                                    <div id="@item.Id" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <p>@item.skillDesc</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+    <!-- End Page Wrapper -->
+    <!-- JavaScripts -->
+    <script src="~/assets/js/vendors/jquery/jquery.min.js"></script>
+    <script src="~/assets/js/vendors/bootstrap.min.js"></script>
+    <script src="~/assets/js/vendors/owl.carousel.min.js"></script>
+    <script src="~/assets/js/vendors/jquery.isotope.min.js"></script>
+    <script src="~/assets/js/main.js"></script>
+</body>
+
+<!-- Mirrored from new.uouapps.com/remoticv/about-me.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 May 2019 06:20:30 GMT -->
+</html>
+

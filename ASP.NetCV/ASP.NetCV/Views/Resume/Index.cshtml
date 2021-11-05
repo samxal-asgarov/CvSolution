@@ -1,0 +1,116 @@
+﻿@model Resume
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="col-md-8">
+    <div class="inside-sec">
+        <!-- BIO AND SKILLS -->
+        <h5 class="tittle">Bio & Skills</h5>
+        <div class="bio-info padding-30">
+            <p>
+                @Model?.Bio?.Desc1<br>
+                <br>
+                @Model?.Bio?.Desc2<br>
+                <br>
+                @Model?.Bio?.Desc3
+            </p>
+            <div class="skills">
+
+
+
+
+
+                <!-- Soft Skills -->
+                <h5 class="margin-top-30">Soft Skills</h5>
+                @foreach (var item in Model.ResumeSkils)
+                {
+                    <h6>@item.SkillName</h6>
+                    <div class="panel-group accordion" id="accordion1">
+                        <div class="panel panel-default">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <!-- PANEL HEADING -->
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion1" href="#@item.Id" class="collapsed"> @item.Name</a> </h4>
+                                    </div>
+                                </div>
+
+                                <!-- Skillls Bars -->
+                                <div class="col-sm-8">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"> <span class="sr-only">60% Complete</span> </div>
+                                    </div>
+
+                                    <!-- Skillls Text -->
+                                    <div id="@item.Id" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <p>@item.NameDesc</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <!-- Application of knowledge -->
+                <!-- Follow ethical -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Professional Experience -->
+    <div class="inside-sec margin-top-30">
+        <!-- Professional Experience -->
+        <h5 class="tittle">Professional Experience</h5>
+        <div class="padding-30 exp-history">
+            @foreach (var item in Model.Expirences)
+            {
+                <div class="exp">
+                    <div class="media-left"> <span class="sun">@item.Date</span> </div>
+                    <div class="media-body">
+
+                        <!-- COmpany Logo -->
+                        <div class="company-logo"> <img src="~/uploads/images/@item.ImgPath" alt=""> </div>
+                        <h6>@item.ExpierenceName</h6>
+                        <p>@item.ExpirenceWork</p>
+                        <p>@item.ExpirenceLocation</p>
+                        <p class="margin-top-10"> @item.ExpierenceDesc (...) <a href="#.">Read More</a> </p>
+                    </div>
+                </div>
+            }
+
+            <!-- Wordpress Developer -->
+         
+
+            <!-- html5 and css3 Developer -->
+
+        </div>
+    </div>
+
+    <!-- Academic Background -->
+    <div class="inside-sec margin-top-30">
+        <!-- Academic Background -->
+        <h5 class="tittle">Academic Background</h5>
+        <div class="padding-30 exp-history">
+            @foreach (var item in Model.ResumeBackgrounds)
+            {
+                <div class="exp">
+                    <div class="media-left"> <span class="sun">@item.Date</span> </div>
+                    <div class="media-body">
+                        <!-- COmpany Logo -->
+                        <div class="company-logo"> <span class="diploma"><i class="fa fa-graduation-cap"></i> Download Diploma</span> </div>
+                        <h6>@item.ExpierenceName</h6>
+                        <p>@item.ExpirenceWork</p>
+                        <p>@item.ExpirenceLocation</p>
+                        <p>class="@item.ExpierenceDesc"<a href="#.">Read More</a> </p>
+                    </div>
+                </div>
+            }
+            <!-- Wordpress Developer -->
+            <!-- html5 and css3 Developer -->
+
+        </div>
+    </div>
+</div>

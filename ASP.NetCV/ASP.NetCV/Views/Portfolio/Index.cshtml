@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Portfolio>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="col-md-8">
+
+    <!-- MAIN NAV -->
+
+    <div class="inside-sec">
+        <!-- BIO AND SKILLS -->
+        <h5 class="tittle">PORTFOLIO</h5>
+
+        <!-- PORTFOLIO -->
+        <section class="portfolio padding-top-50 padding-bottom-50">
+            <!-- Work Filter -->
+            <ul class="tabs portfolio-filter text-center margin-bottom-30">
+                <li class="filter" data-filter="all">all</li>
+                <li class="filter" data-filter=".brand">Branding</li>
+                <li class="filter" data-filter=".design">designing</li>
+                <li class="filter" data-filter=".photo">photography</li>
+                <li class="filter" data-filter=".visual">visual design</li>
+            </ul>
+
+            <!-- PORTFOLIO ITEMS -->
+            <div id="Container" class="item-space row col-3">
+                @foreach (var item in Model)
+                {
+
+                    <article class="portfolio-item mix  design photo visual">
+                        <div class="portfolio-image">
+                            <a href="#."> <img class="img-responsive" alt="Open Imagination" src="~/uploads/images/@item.ImgPath"> </a>
+                            <div class="portfolio-overlay style-4">
+                                <div class="detail-info">
+                                    <div class="position-center-center">
+                                        <h3 class="no-margin">@item.Name</h3>
+                                        <span><a href="#.">@item.NameDesc</a></span> <a href="#." class="go"><i class="@item.Icon"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                }
+
+                <!-- ITEM -->
+                <!-- ITEM -->
+             
+            </div>
+        </section>
+
+    </div>
+</div>

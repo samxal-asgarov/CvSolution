@@ -1,0 +1,180 @@
+﻿
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-8">
+    <div class="inside-sec">
+        <!-- BIO AND SKILLS -->
+        <h5 class="tittle">Bio & Skills</h5>
+        <div class="bio-info padding-30">
+            <textarea class="form-control" placeholder="Write your description here"></textarea>
+            <div class="skills margin-top-50">
+
+                <!-- SKILLS -->
+                <h6>Add A Skill</h6>
+
+                <!-- Sound Engineering -->
+                <div class="row">
+
+                    <!-- Categories -->
+                    <div class="col-sm-6">
+                        <select class="selectpicker">
+                            <option> All Categories</option>
+                            <option>Web Design</option>
+                            <option>Development</option>
+                        </select>
+                        <span class="add-custm">or <a href="#."> Add A Custom Category</a></span>
+                    </div>
+
+                    <!--  Skills -->
+                    <div class="col-sm-6">
+                        <select class="selectpicker">
+                            <option>Skills</option>
+                            <option>HTML5 CSS3</option>
+                            <option>Photoshop</option>
+                        </select>
+                        <span class="add-custm">or <a href="#."> Add A Custom Skills</a></span>
+                    </div>
+                </div>
+
+                <!-- Disply Type -->
+                <div class="disply-type">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="radio radio-inline">
+                                <input type="radio" id="inlineRadio1" value="option1" name="radioInline">
+                                <label for="inlineRadio1"> Display As Bar </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="radio radio-inline">
+                                <input type="radio" id="inlineRadio2" value="option1" name="radioInline">
+                                <label for="inlineRadio2"> Display As Tag </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Info -->
+                <div class="skill-type-info">
+                    <label>
+                        Skill Level
+                        <input type="text" class="form-control" placeholder="0">
+                    </label>
+                    <label>
+                        Skill Description
+                        <textarea class="form-control" placeholder=""></textarea>
+                    </label>
+                </div>
+                <!-- ADD MORE-->
+                <a href="#" class="btn"><i class="fa fa-plus"></i> Add Skill</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Professional Experience -->
+    <div class="inside-sec margin-top-30">
+        <!-- Professional Experience -->
+        <h5 class="tittle">Professional Experience</h5>
+        <div class="padding-30 exp-history">
+
+            <!-- ADD Professional -->
+            <div class="exp">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <label>
+                            Duration
+                            <input type="text" class="form-control" placeholder="YYYY - YYYY">
+                        </label>
+                        <label>
+                            Job Title
+                            <input type="text" class="form-control" placeholder="">
+                        </label>
+                        <label>
+                            Company Name
+                            <input type="text" class="form-control" placeholder="">
+                        </label>
+                        <label>
+                            Location
+                            <input type="text" class="form-control" placeholder="">
+                        </label>
+                    </div>
+
+                    <!-- UPLOAD IMG -->
+                    <div class="col-sm-5">
+                        <label class="btn-file">
+                            <i class="fa fa-camera"></i> Click to attach logo
+                            <input type="file" style="display: none;">
+                        </label>
+                    </div>
+
+                    <!-- ADD DETAILS -->
+                    <div class="col-sm-12">
+                        <label>
+                            Details
+                            <textarea class="form-control" placeholder=""></textarea>
+                        </label>
+                        <!-- ADD MORE-->
+                        <a href="#" class="btn margin-top-20"><i class="fa fa-plus"></i> Add Experience</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Academic Background -->
+    <div class="inside-sec margin-top-30">
+        <!-- Academic Background -->
+        <h5 class="tittle">Academic Background</h5>
+        <div class="padding-30 exp-history">
+
+            <!-- ADD EXP -->
+            <div class="exp">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <label>
+                            Qualification
+                            <input type="text" class="form-control" placeholder="YYYY - YYYY">
+                        </label>
+                        <label>
+                            Degree
+                            <input type="text" class="form-control" placeholder="">
+                        </label>
+                        <label>
+                            Institute / University Name
+                            <input type="text" class="form-control" placeholder="">
+                        </label>
+                        <label>
+                            Year of Obtention
+                            <input type="text" class="form-control" placeholder="">
+                        </label>
+                    </div>
+
+                    <!-- UPLOAD IMG -->
+                    <div class="col-sm-5">
+                        <label class="btn-file">
+                            <i class="fa fa-camera"></i> Click to add diploma
+                            <input type="file" style="display: none;">
+                        </label>
+                    </div>
+
+                    <!-- ADD DETAIL -->
+                    <div class="col-sm-12">
+                        <label>
+                            Details
+                            <textarea class="form-control" placeholder=""></textarea>
+                        </label>
+                        <!-- ADD MORE -->
+                        <a href="#" class="btn margin-top-20"><i class="fa fa-plus"></i> Add Experience</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Save Info -->
+    <div class="save-info"> <a href="#." class="btn">Cancel</a> <a href="#." class="btn">Save Settings</a> </div>
+</div>
+

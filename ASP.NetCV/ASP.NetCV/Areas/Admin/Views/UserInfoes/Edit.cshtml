@@ -1,0 +1,96 @@
+﻿@model ASP.NetCV.Models.Entities.UserInfo
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>UserInfo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LOCATION" class="control-label"></label>
+                <input asp-for="LOCATION" class="form-control" />
+                <span asp-validation-for="LOCATION" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DEGREEMBA" class="control-label"></label>
+                <input asp-for="DEGREEMBA" class="form-control" />
+                <span asp-validation-for="DEGREEMBA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PHONE" class="control-label"></label>
+                <input asp-for="PHONE" class="form-control" />
+                <span asp-validation-for="PHONE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EMAIL" class="control-label"></label>
+                <input asp-for="EMAIL" class="form-control" />
+                <span asp-validation-for="EMAIL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AGE" class="control-label"></label>
+                <input asp-for="AGE" class="form-control" />
+                <span asp-validation-for="AGE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EXPERIENCE" class="control-label"></label>
+                <input asp-for="EXPERIENCE" class="form-control" />
+                <span asp-validation-for="EXPERIENCE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CAREERLEVEL" class="control-label"></label>
+                <input asp-for="CAREERLEVEL" class="form-control" />
+                <span asp-validation-for="CAREERLEVEL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FAX" class="control-label"></label>
+                <input asp-for="FAX" class="form-control" />
+                <span asp-validation-for="FAX" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WEBSITEexample" class="control-label"></label>
+                <input asp-for="WEBSITEexample" class="form-control" />
+                <span asp-validation-for="WEBSITEexample" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="CreatByUserId" class="control-label"></label>
+                <input asp-for="CreatByUserId" class="form-control" />
+                <span asp-validation-for="CreatByUserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatDate" class="control-label"></label>
+                <input asp-for="CreatDate" class="form-control" />
+                <span asp-validation-for="CreatDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeletedByUserID" class="control-label"></label>
+                <input asp-for="DeletedByUserID" class="form-control" />
+                <span asp-validation-for="DeletedByUserID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeletedDate" class="control-label"></label>
+                <input asp-for="DeletedDate" class="form-control" />
+                <span asp-validation-for="DeletedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
